@@ -7,17 +7,17 @@ const USERS = [
     {
         id: 2,
         usarname: 'Fabio Maran Florentino',
-        userlogin: 'fflorentino',
+        userlogin: 'fmaran',
     },
     {
         id: 3,
-        usarname: 'Flávio Maran Florentino',
-        userlogin: 'fflorentino',
+        usarname: 'Fernando Maran Florentino',
+        userlogin: 'fmflorentino',
     },
     {
         id: 4,
-        usarname: 'Flávio Maran Florentino',
-        userlogin: 'fflorentino',
+        usarname: 'Cleusa Maran Florentino',
+        userlogin: 'cleusamaran',
     }
 ];
 
