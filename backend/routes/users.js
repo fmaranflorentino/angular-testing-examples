@@ -5,17 +5,21 @@ const USERS = require('./../mocks/db-mock');
 
 router.get('', (req, res, next) => {
 
+    const users = Object.values(USERS);
+
     res.status(200).json({
         message: "users fetched successfully!",
-        payload: USERS
+        payload: users
     });
 
 });
 
 router.get('/:id', (req, res, next) => {
     const id = Number(req.params['id']);
-    const user = USERS.filter(user => user.id === id);
-    console.log('here', user);
+
+    const users = Object.values(USERS);
+
+    const user = users.filter(user => user.id === id);
 
     res.status(200)
         .json({
