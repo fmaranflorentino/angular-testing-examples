@@ -27,7 +27,7 @@ const USERS = [
         id: 4,
         username: 'Cleusa Maran Florentino',
         userlogin: 'cleusamaran',
-        imagePath: '/assets/images/woman.jpg',
+        imagePath: '/assets/images/woman.webp',
         role: 'Administrator',
         lastEdition: new Date()
     }

@@ -1,6 +1,6 @@
 $wewak: #1f920b;
 
-$mat-lc-custom-theme: (
+$custom-theme: (
   50: lighten($wewak, 5%),
   100: lighten($wewak, 4%),
   200: lighten($wewak, 3%),
@@ -33,7 +33,7 @@ $mat-lc-custom-theme: (
   )
 );
 
-$mat-lc-custom-theme2: (
+$custom-theme2: (
   50: transparent,
   100: transparent,
   200: transparent,

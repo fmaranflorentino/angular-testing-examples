@@ -1,11 +1,11 @@
 @import '~@angular/material/theming';
-@import './mat-lc-custom-thme-pallet';
+@import './theme-pallet';
 
 
 @include mat-core();
 
-$primary: mat-palette($mat-lc-custom-theme);
-$accent:  mat-palette($mat-lc-custom-theme2);
+$primary: mat-palette($custom-theme);
+$accent:  mat-palette($custom-theme2);
 
 $theme: mat-light-theme($primary, $accent);
 

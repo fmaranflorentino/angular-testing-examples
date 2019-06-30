@@ -9,11 +9,13 @@ import { MatToolbarModule, MatCardModule, MatButtonModule, MatIconModule } from 
 
 import { UsersAdmComponent } from './users-adm/users-adm.component';
 import { HttpClientModule } from '@angular/common/http';
+import { UserCardComponent } from './users-adm/componets/user-card/user-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UsersAdmComponent
+    UsersAdmComponent,
+    UserCardComponent
   ],
   imports: [
     BrowserModule,

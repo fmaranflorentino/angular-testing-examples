@@ -1,0 +1,22 @@
+input {
+  width: 100%;
+  display: block;
+  
+  &[disabled] {
+    background: transparent;
+    border-color: transparent;
+    color: #212020;
+  }
+}
+
+mat-card-title {
+  input {
+    letter-spacing: 1.2px;
+  }
+}
+
+mat-card-subtitle {
+  input {
+    letter-spacing: 0.7px;
+  }
+}
