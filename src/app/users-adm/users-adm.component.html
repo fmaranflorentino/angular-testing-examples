@@ -1,0 +1,23 @@
+<mat-toolbar color="primary">User Management</mat-toolbar>
+
+<div class="container">
+  <div class="user-list" *ngIf="usersList?.length > 0">
+    <div class="user-card" *ngFor="let user of usersList">
+      <app-user-card
+       [userData]="user"
+       (deleteUser)="handleDeleterUser($event)"
+       (editedUser)="handleEditUser($event)"></app-user-card>
+    </div>
+  </div>
+
+  <div class="action-box"></div>
+
+  <button
+    mat-fab
+    color="primary"
+    class="main-settings"
+    aria-label="Settings Buttons"
+  >
+    <mat-icon>settings</mat-icon>
+  </button>
+</div>

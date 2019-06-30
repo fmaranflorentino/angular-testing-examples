@@ -1,0 +1,39 @@
+.mat-toolbar {
+  background-color: #1f920b;
+}
+
+.container {
+  width: 100%;
+
+  display: block;
+
+  .user-list,
+  .action-box {
+    display: block;
+    padding: 20px;
+  }
+
+  .user-list {
+    width: 60%;
+
+    .user-card {
+      width: 50%;
+      display: inline-block;
+      padding: 20px;
+      
+      .example-header-image {
+        background-size: cover;
+      }
+    }
+  }
+
+  .action-box {
+    width: 40%;
+  }
+
+  .main-settings {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+  }
+}
