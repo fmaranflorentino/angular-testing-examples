@@ -10,6 +10,7 @@ export class UserCardComponent implements OnInit {
   @Input() userData: Partial<User>;
 
   @Output() editedUser: EventEmitter<Partial<User>> = new EventEmitter();
+  @Output() deleteUser: EventEmitter<User> = new EventEmitter();
 
   @ViewChild('userNameInput', { static: true }) userNameInput: ElementRef;
 
@@ -28,6 +29,14 @@ export class UserCardComponent implements OnInit {
         this.userNameInput.nativeElement.focus();
       }, 10);
     }
+  }
+
+  handleDelete(user: User) {
+    this.deleteUser.emit(user);
+  }
+  
+  handleEdition(user: User) {
+    this.editedUser.emit(user);
   }
 
 }

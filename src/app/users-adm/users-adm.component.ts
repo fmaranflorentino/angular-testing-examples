@@ -37,4 +37,12 @@ export class UsersAdmComponent implements OnInit {
     return item.id
   }
 
+  handleDeleterUser(user: User) {
+    console.log('delete user', user);
+  }
+
+  handleEditUser(user: User) {
+    console.log('edit user', user);
+  }
+
 }
