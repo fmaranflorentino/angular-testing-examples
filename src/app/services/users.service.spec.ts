@@ -4,12 +4,19 @@ import { UsersService } from './users.service';
 import { AppModule } from '../app.module';
 
 describe('UsersService', () => {
+
+  let service: UsersService;
+
   beforeEach(() => TestBed.configureTestingModule({
-    imports: [ AppModule ]
-  }));
+    imports: [AppModule]
+  })
+    .compileComponents()
+    .then(() => {
+      service = TestBed.get(UsersService);
+    })
+  );
 
   it('should be created', () => {
-    const service: UsersService = TestBed.get(UsersService);
     expect(service).toBeTruthy();
   });
 });
