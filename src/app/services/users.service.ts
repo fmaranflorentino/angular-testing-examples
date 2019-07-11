@@ -17,7 +17,7 @@ export class UsersService {
     return this.http
       .get<any>('http://localhost:3000/api/users')
       .pipe(
-        map(res => res['payload'])
+        map((res: any) => res.payload)
       );
   }
 
@@ -25,7 +25,7 @@ export class UsersService {
     return this.http
       .get(`http://localhost:3000/api/users/${userId}`)
       .pipe(
-        map(res => res['payload'])
+        map((res: any) => res.payload)
       );
   }
 
@@ -33,7 +33,7 @@ export class UsersService {
     return this.http
       .put(`http://localhost:3000/api/users`, user)
       .pipe(
-        map(res => res['payload'])
+        map((res: any) => res.payload)
       );
   }
 
