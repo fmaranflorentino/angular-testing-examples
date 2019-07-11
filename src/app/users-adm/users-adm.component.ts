@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersService } from '../services/users.service';
 import { User } from '../interfaces/user';
+import { of, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-users-adm',
@@ -8,33 +9,22 @@ import { User } from '../interfaces/user';
   styleUrls: ['./users-adm.component.scss']
 })
 export class UsersAdmComponent implements OnInit {
-  usersList: User[];
+  usersList$: Observable<User[]>;
 
   constructor(private usersService: UsersService) { }
 
-  async ngOnInit() {
+   ngOnInit() {
 
-    this.usersList = await this.getAllUsers();
+    this.getAllUsers();
 
   }
 
-  getAllUsers(): Promise<any> {
-    return new Promise((resolve, reject) => {
-      this.usersService
-        .getAllUsers()
-        .subscribe(
-          res => {
-            resolve(res);
-          }
-        ),
-        error => {
-          reject(error);
-        }
-    })
+  getAllUsers() {
+    this.usersList$ = this.usersService.getAllUsers();
   }
 
   trackByUsers(index, item) {
-    return item.id
+    return item.id;
   }
 
   handleDeleterUser(user: User) {

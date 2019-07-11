@@ -7,12 +7,16 @@ import { User } from 'src/app/interfaces/user';
   styleUrls: ['./user-card.component.scss']
 })
 export class UserCardComponent implements OnInit {
-  @Input() userData: Partial<User>;
+  @Input()
+  userData: Partial<User>;
 
-  @Output() editedUser: EventEmitter<Partial<User>> = new EventEmitter();
-  @Output() deleteUser: EventEmitter<User> = new EventEmitter();
+  @Output()
+  editedUser: EventEmitter<Partial<User>> = new EventEmitter();
+  @Output()
+  deleteUser: EventEmitter<User> = new EventEmitter();
 
-  @ViewChild('userNameInput', { static: true }) userNameInput: ElementRef;
+  @ViewChild('userNameInput', { static: true })
+  userNameInput: ElementRef;
 
   isEditionMode = false;
 
@@ -34,7 +38,7 @@ export class UserCardComponent implements OnInit {
   handleDelete(user: User) {
     this.deleteUser.emit(user);
   }
-  
+
   handleEdition(user: User) {
     this.editedUser.emit(user);
   }
